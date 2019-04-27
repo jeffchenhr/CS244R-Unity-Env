@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/ML-Agents/Examples/BananaCollectors/Scenes/Banana.unity
+  isLoaded: 1
+  isActive: 1
