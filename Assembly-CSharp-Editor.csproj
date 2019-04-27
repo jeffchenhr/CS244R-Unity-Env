@@ -71,6 +71,7 @@
      <Compile Include="Assets\ML-Agents\Editor\Tests\MLAgentsEditModeTest.cs" />
      <Compile Include="Assets\ML-Agents\Editor\Tests\MultinomialTest.cs" />
      <Compile Include="Assets\ML-Agents\Editor\Tests\RandomNormalTest.cs" />
+     <Compile Include="Assets\ML-Agents\Editor\Tests\RayPerceptionTests.cs" />
      <Compile Include="Assets\ML-Agents\Editor\Tests\UtilitiesTests.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/haoranchen/Documents/ML-Agents/ml-agents/UnitySDK/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

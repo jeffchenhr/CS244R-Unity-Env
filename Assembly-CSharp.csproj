@@ -92,6 +92,8 @@
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\JointDriveController.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RandomDecision.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception2D.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception3D.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\TargetContact.cs" />
      <Compile Include="Assets\ML-Agents\Examples\Soccer\Scripts\AgentSoccer.cs" />
      <Compile Include="Assets\ML-Agents\Examples\Soccer\Scripts\SoccerAcademy.cs" />
@@ -121,6 +123,9 @@
      <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\AgentInfoProto.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\BrainParametersProto.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CommandProto.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomAction.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomObservation.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomResetParameters.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\DemonstrationMetaProto.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\EngineConfigurationProto.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\EnvironmentParametersProto.cs" />
