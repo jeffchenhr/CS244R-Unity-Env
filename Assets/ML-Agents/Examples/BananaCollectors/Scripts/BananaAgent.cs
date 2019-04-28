@@ -52,8 +52,10 @@ public class BananaAgent : Agent
             Vector3 localVelocity = transform.InverseTransformDirection(agentRb.velocity);
             AddVectorObs(localVelocity.x);
             AddVectorObs(localVelocity.z);
-            Vector3 localPosition = transform.InverseTransformDirection(agentRb.position);
+            Vector3 localPosition = agentRb.position;
             AddVectorObs(localPosition.x);
+            AddVectorObs(localPosition.z);
+            Vector3 localRotation = agentRb.rotation.eulerAngles;
             AddVectorObs(localPosition.z);
             AddVectorObs(System.Convert.ToInt32(frozen));
             AddVectorObs(System.Convert.ToInt32(shoot));
