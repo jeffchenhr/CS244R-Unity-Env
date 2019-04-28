@@ -11,10 +11,29 @@ public class BananaArea : Area
     public int numBadBananas;
     public bool respawnBananas;
     public float range;
+    public Vector3[] vector;
+    public Quaternion[] euler;
+    public Vector3[] vectorBad;
+    public Quaternion[] eulerBad;
+
     // Use this for initialization
     void Start()
     {
+        vector= new Vector3[numBananas];
+        euler =new Quaternion[numBananas];
+        for (int i = 0; i < numBananas; i++)
+        {
+        vector[i]=new Vector3(Random.Range(-range, range), 1f,Random.Range(-range, range)) + transform.position;
+        euler[i]=Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f));
+    }
 
+        vectorBad= new Vector3[numBadBananas];
+        eulerBad =new Quaternion[numBadBananas];
+        for (int i = 0; i < numBadBananas; i++)
+        {
+        vectorBad[i]=new Vector3(Random.Range(-range, range), 1f,Random.Range(-range, range)) + transform.position;
+        eulerBad[i]=Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f));
+    }
     }
 
     // Update is called once per frame
@@ -27,9 +46,19 @@ public class BananaArea : Area
     {
         for (int i = 0; i < numBana; i++)
         {
-            GameObject bana = Instantiate(bananaType, new Vector3(Random.Range(-range, range), 1f,
-                                                              Random.Range(-range, range)) + transform.position,
-                                          Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f)));
+            GameObject bana = Instantiate(bananaType, vector[i],
+                                          euler[i]);
+            bana.GetComponent<BananaLogic>().respawn = respawnBananas;
+            bana.GetComponent<BananaLogic>().myArea = this;
+        }
+    }
+
+    void CreateBadBanana(int numBana, GameObject bananaType)
+    {
+        for (int i = 0; i < numBana; i++)
+        {
+            GameObject bana = Instantiate(bananaType, vectorBad[i],
+                                          eulerBad[i]);
             bana.GetComponent<BananaLogic>().respawn = respawnBananas;
             bana.GetComponent<BananaLogic>().myArea = this;
         }
@@ -49,7 +78,7 @@ public class BananaArea : Area
         }
 
         CreateBanana(numBananas, banana);
-        CreateBanana(numBadBananas, badBanana);
+        CreateBadBanana(numBadBananas, badBanana);
     }
 
     public override void ResetArea()
