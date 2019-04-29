@@ -16,6 +16,7 @@ public class BananaAgent : Agent
     float effectTime;
     Rigidbody agentRb;
     private int bananas;
+    private int reward;
 
     // Speed of agent rotation.
     public float turnSpeed = 300;
@@ -39,6 +40,7 @@ public class BananaAgent : Agent
         myArea = area.GetComponent<BananaArea>();
         rayPer = GetComponent<RayPerception3D>();
         myAcademy = FindObjectOfType<BananaAcademy>();
+        reward =0;
     }
 
     public override void CollectObservations()
@@ -56,7 +58,7 @@ public class BananaAgent : Agent
             AddVectorObs(localPosition.x);
             AddVectorObs(localPosition.z);
             Vector3 localRotation = agentRb.rotation.eulerAngles;
-            AddVectorObs(localPosition.z);
+            AddVectorObs(localPosition.y);
             AddVectorObs(System.Convert.ToInt32(frozen));
             AddVectorObs(System.Convert.ToInt32(shoot));
         }
@@ -239,6 +241,8 @@ public class BananaAgent : Agent
         shoot = false;
         agentRb.velocity = Vector3.zero;
         bananas = 0;
+        reward =0;
+        Monitor.Log(myArea.name, ""+reward, null);
         myLaser.transform.localScale = new Vector3(0f, 0f, 0f);
         transform.position = new Vector3(Random.Range(-myArea.range, myArea.range),
                                          2f, Random.Range(-myArea.range, myArea.range))
@@ -253,6 +257,8 @@ public class BananaAgent : Agent
             Satiate();
             collision.gameObject.GetComponent<BananaLogic>().OnEaten();
             AddReward(1f);
+            reward = reward +1;
+            Monitor.Log(myArea.name, ""+reward, null);
             bananas += 1;
             if (contribute)
             {
@@ -265,6 +271,8 @@ public class BananaAgent : Agent
             collision.gameObject.GetComponent<BananaLogic>().OnEaten();
 
             AddReward(-1f);
+            reward = reward -1;
+            Monitor.Log(myArea.name, ""+reward, null);
             if (contribute)
             {
                 myAcademy.totalScore -= 1;
