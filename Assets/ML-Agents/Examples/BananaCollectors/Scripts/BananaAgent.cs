@@ -30,6 +30,7 @@ public class BananaAgent : Agent
     public bool contribute;
     private RayPerception3D rayPer;
     public bool useVectorObs;
+    private int reward;
 
     public override void InitializeAgent()
     {
@@ -39,6 +40,7 @@ public class BananaAgent : Agent
         myArea = area.GetComponent<BananaArea>();
         rayPer = GetComponent<RayPerception3D>();
         myAcademy = FindObjectOfType<BananaAcademy>();
+        reward=0;
     }
 
     public override void CollectObservations()
@@ -239,6 +241,7 @@ public class BananaAgent : Agent
                                          2f, Random.Range(-myArea.range, myArea.range))
             + area.transform.position;
         transform.rotation = Quaternion.Euler(new Vector3(0f, Random.Range(0, 360)));
+        reward=0;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -249,6 +252,10 @@ public class BananaAgent : Agent
             collision.gameObject.GetComponent<BananaLogic>().OnEaten();
             AddReward(1f);
             bananas += 1;
+            //Jeff add reward monitor
+            reward=reward +1;
+            Monitor.Log(myArea.name, ""+reward, null);
+            //
             if (contribute)
             {
                 myAcademy.totalScore += 1;
@@ -260,6 +267,10 @@ public class BananaAgent : Agent
             collision.gameObject.GetComponent<BananaLogic>().OnEaten();
 
             AddReward(-1f);
+            //Jeff add reward monitor
+            reward=reward -1;
+            Monitor.Log(myArea.name, ""+reward, null);
+            //
             if (contribute)
             {
                 myAcademy.totalScore -= 1;

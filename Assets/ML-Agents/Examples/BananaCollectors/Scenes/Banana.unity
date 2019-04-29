@@ -248,6 +248,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114473066568326592, guid: 253ba015bb1964807a7e5536abfe3673,
+        type: 3}
+      propertyPath: respawnBananas
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432923575290665659, guid: 253ba015bb1964807a7e5536abfe3673,
+        type: 3}
+      propertyPath: m_Text
+      value: RLArea3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253ba015bb1964807a7e5536abfe3673, type: 3}
 --- !u!1 &378228137
@@ -471,6 +481,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114473066568326592, guid: 1901d5ce73c0d49258cc8a8363852162,
+        type: 3}
+      propertyPath: respawnBananas
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1901d5ce73c0d49258cc8a8363852162, type: 3}
 --- !u!1 &762086410
@@ -596,6 +611,16 @@ PrefabInstance:
     - target: {fileID: 4688212428263696, guid: 6053e52a78f3e419bb91d755940b4511, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473066568326592, guid: 6053e52a78f3e419bb91d755940b4511,
+        type: 3}
+      propertyPath: respawnBananas
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6871985742972477900, guid: 6053e52a78f3e419bb91d755940b4511,
+        type: 3}
+      propertyPath: m_Text
+      value: RLArea2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6053e52a78f3e419bb91d755940b4511, type: 3}
@@ -799,6 +824,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6940056650654718103, guid: 38400a68c4ea54b52998e34ee238d1a7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38400a68c4ea54b52998e34ee238d1a7, type: 3}
 --- !u!1001 &1299751270
@@ -855,6 +885,16 @@ PrefabInstance:
     - target: {fileID: 4688212428263696, guid: 79b7dab3b66cd4d59aba76d43c9e04ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473066568326592, guid: 79b7dab3b66cd4d59aba76d43c9e04ec,
+        type: 3}
+      propertyPath: respawnBananas
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122597921832850667, guid: 79b7dab3b66cd4d59aba76d43c9e04ec,
+        type: 3}
+      propertyPath: m_Text
+      value: RLArea4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79b7dab3b66cd4d59aba76d43c9e04ec, type: 3}

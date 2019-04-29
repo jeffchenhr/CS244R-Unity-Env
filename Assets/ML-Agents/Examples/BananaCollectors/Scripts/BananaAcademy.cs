@@ -13,6 +13,12 @@ public class BananaAcademy : Academy
 
     public int totalScore;
     public Text scoreText;
+
+    public override void InitializeAcademy()
+    {
+        Monitor.SetActive(true);
+    }
+
     public override void AcademyReset()
     {
         ClearObjects(GameObject.FindGameObjectsWithTag("banana"));
@@ -26,6 +32,7 @@ public class BananaAcademy : Academy
         }
 
         totalScore = 0;
+        Monitor.SetActive(true);
     }
 
     void ClearObjects(GameObject[] objects)
