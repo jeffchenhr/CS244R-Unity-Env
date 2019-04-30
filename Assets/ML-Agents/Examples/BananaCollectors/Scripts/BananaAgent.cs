@@ -248,34 +248,70 @@ public class BananaAgent : Agent
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("banana"))
+        if (myArea.name == "RLArea 4" || myArea.name == "RLArea 2")
         {
-            Satiate();
-            collision.gameObject.GetComponent<BananaLogic>().OnEaten();
-            AddReward(1f);
-            bananas += 1;
-            //Jeff add reward monitor
-            reward=reward +1;
-            Monitor.Log(myArea.name, ""+reward, null);
-            //
-            if (contribute)
+            if (collision.gameObject.CompareTag("banana"))
             {
-                myAcademy.totalScore += 1;
+                Satiate();
+                collision.gameObject.GetComponent<BananaLogic>().OnEaten();
+                AddReward(-1f);
+                bananas -= 1;
+                //Jeff add reward monitor
+                reward=reward -1;
+                Monitor.Log(myArea.name, ""+reward, null);
+                //
+                if (contribute)
+                {
+                    myAcademy.totalScore -= 1;
+                }
+            }
+            if (collision.gameObject.CompareTag("badBanana"))
+            {
+                Poison();
+                collision.gameObject.GetComponent<BananaLogic>().OnEaten();
+
+                AddReward(1f);
+                //Jeff add reward monitor
+                reward=reward +1;
+                Monitor.Log(myArea.name, ""+reward, null);
+                //
+                if (contribute)
+                {
+                    myAcademy.totalScore += 1;
+                }
             }
         }
-        if (collision.gameObject.CompareTag("badBanana"))
+        else
         {
-            Poison();
-            collision.gameObject.GetComponent<BananaLogic>().OnEaten();
-
-            AddReward(-1f);
-            //Jeff add reward monitor
-            reward=reward -1;
-            Monitor.Log(myArea.name, ""+reward, null);
-            //
-            if (contribute)
+            if (collision.gameObject.CompareTag("banana"))
             {
-                myAcademy.totalScore -= 1;
+                Satiate();
+                collision.gameObject.GetComponent<BananaLogic>().OnEaten();
+                AddReward(1f);
+                bananas += 1;
+                //Jeff add reward monitor
+                reward=reward +1;
+                Monitor.Log(myArea.name, ""+reward, null);
+                //
+                if (contribute)
+                {
+                    myAcademy.totalScore += 1;
+                }
+            }
+            if (collision.gameObject.CompareTag("badBanana"))
+            {
+                Poison();
+                collision.gameObject.GetComponent<BananaLogic>().OnEaten();
+
+                AddReward(-1f);
+                //Jeff add reward monitor
+                reward=reward -1;
+                Monitor.Log(myArea.name, ""+reward, null);
+                //
+                if (contribute)
+                {
+                    myAcademy.totalScore -= 1;
+                }
             }
         }
     }

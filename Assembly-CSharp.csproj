@@ -59,6 +59,7 @@
      <Compile Include="Assets\ML-Agents\Examples\3DBall\Scripts\Ball3DHardAgent.cs" />
      <Compile Include="Assets\ML-Agents\Examples\BananaCollectors\Scripts\BananaAcademy.cs" />
      <Compile Include="Assets\ML-Agents\Examples\BananaCollectors\Scripts\BananaAgent.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\BananaCollectors\Scripts\BananaAgent_Swapped.cs" />
      <Compile Include="Assets\ML-Agents\Examples\BananaCollectors\Scripts\BananaArea.cs" />
      <Compile Include="Assets\ML-Agents\Examples\BananaCollectors\Scripts\BananaLogic.cs" />
      <Compile Include="Assets\ML-Agents\Examples\Basic\Scripts\BasicAcademy.cs" />
