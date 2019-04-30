@@ -53,6 +53,8 @@ public class BananaAgent : Agent
             AddVectorObs(rayPer.Perceive(rayDistance, rayAngles, detectableObjects, 0f, 0f));
             Vector3 localVelocity = transform.InverseTransformDirection(agentRb.velocity);
             AddVectorObs(localVelocity.x);
+            Monitor.Log(myArea.name+"x", ""+localVelocity.x, null);
+            Monitor.Log(myArea.name+"z", ""+localVelocity.z, null);
             AddVectorObs(localVelocity.z);
             AddVectorObs(System.Convert.ToInt32(frozen));
             AddVectorObs(System.Convert.ToInt32(shoot));
