@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: -636
+    x: -637
     y: -1395
     width: 2560
     height: 1395
@@ -292,7 +292,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -98
+    x: -99
     y: -1365
     width: 1275
     height: 841
@@ -398,7 +398,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -636
+    x: -637
     y: -504
     width: 1815
     height: 464
@@ -415,20 +415,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ML-Agents/Examples/BananaCollectors/Brains
+    - Assets/ML-Agents/Examples/BananaCollectors/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ML-Agents/Examples/BananaCollectors/Brains
+  - Assets/ML-Agents/Examples/BananaCollectors/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/haoranchen/Documents/ML-Agents/ml-agents/UnitySDK
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 74.000244}
-    m_SelectedIDs: 7a0d0000
-    m_LastClickedID: 3450
-    m_ExpandedIDs: 00000000dc0a0000440c0000dc0c00008e0d000000ca9a3b
+    m_SelectedIDs: a40f0000
+    m_LastClickedID: 4004
+    m_ExpandedIDs: 00000000ea0a0000520c0000ea0c00009c0d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -456,7 +456,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000dc0a0000440c0000dc0c00008e0d0000
+    m_ExpandedIDs: 00000000ea0a0000520c0000ea0c00009c0d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,7 +532,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1181
+    x: 1180
     y: -1365
     width: 741
     height: 1325
@@ -567,7 +567,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -636
+    x: -637
     y: -1365
     width: 536
     height: 841
@@ -575,9 +575,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d20e0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 4af8ffffd6fbffff
+      m_SelectedIDs: e23d0000
+      m_LastClickedID: 15842
+      m_ExpandedIDs: fec9f8ff1ccaf8ffcccbf8ffd6fbfffff4400000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
