@@ -244,6 +244,7 @@ public class BananaAgent : Agent
             + area.transform.position;
         transform.rotation = Quaternion.Euler(new Vector3(0f, Random.Range(0, 360)));
         reward=0;
+        Monitor.Log(myArea.name, ""+reward, null);
     }
 
     void OnCollisionEnter(Collision collision)
