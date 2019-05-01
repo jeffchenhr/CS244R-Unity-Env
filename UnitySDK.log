@@ -16,3 +16,46 @@
  
 4/30/2019 11:19:20 PM
  
+5/1/2019 12:02:46 AM
+ 
+5/1/2019 12:06:08 AM
+ 
+5/1/2019 12:11:35 AM
+ 
+Warning
+Assets/ML-Agents/Scripts/Academy.cs(119,13): warning CS0649: Field 'Academy.maxSteps' is never assigned to, and will always have its default value 0
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+Error
+The same field name is serialized multiple times in the class or its parent class. This is not supported: Base(BananaAgent) reward
+
+5/1/2019 12:15:45 AM
+ 
+5/1/2019 12:20:03 AM
+ 

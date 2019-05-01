@@ -20,9 +20,9 @@ public class BananaLogic : MonoBehaviour {
     public void OnEaten() {
         if (respawn) 
         {
-            transform.position = new Vector3(Random.Range(-myArea.range, myArea.range), 
+            transform.position = new Vector3(Random.Range(-myArea.range,myArea.range)+myArea.transform.position.x, 
                                              transform.position.y + 3f, 
-                                             Random.Range(-myArea.range, myArea.range));
+                                             Random.Range(-myArea.range,myArea.range)+myArea.transform.position.z);
         }
         else 
         {

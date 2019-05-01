@@ -9,7 +9,7 @@ public class BananaArea : Area
     public GameObject badBanana;
     public int numBananas;
     public int numBadBananas;
-    public bool respawnBananas=false;
+    public bool respawnBananas;
     public float range;
     // Use this for initialization
     void Start()
