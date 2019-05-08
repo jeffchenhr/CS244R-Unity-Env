@@ -34,6 +34,9 @@ public class BananaArea : Area
         vectorBad[i]=new Vector3(Random.Range(-range, range), 1f,Random.Range(-range, range)) + transform.position;
         eulerBad[i]=Quaternion.Euler(new Vector3(0f, Random.Range(0f, 360f), 90f));
     }
+
+        respawnBananas= true;
+
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class BananaArea : Area
                                           euler[i]);
             bana.GetComponent<BananaLogic>().respawn = respawnBananas;
             bana.GetComponent<BananaLogic>().myArea = this;
+            bana.GetComponent<BananaLogic>().vector=vector[i];
         }
     }
 
@@ -61,6 +65,7 @@ public class BananaArea : Area
                                           eulerBad[i]);
             bana.GetComponent<BananaLogic>().respawn = respawnBananas;
             bana.GetComponent<BananaLogic>().myArea = this;
+            bana.GetComponent<BananaLogic>().vector=vectorBad[i];
         }
     }
 

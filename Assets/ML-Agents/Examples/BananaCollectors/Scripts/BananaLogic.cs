@@ -6,6 +6,8 @@ public class BananaLogic : MonoBehaviour {
 
     public bool respawn;
     public BananaArea myArea;
+    public Vector3 vector;
+    public Rigidbody rb;
 
     // Use this for initialization
     void Start () {
@@ -20,9 +22,11 @@ public class BananaLogic : MonoBehaviour {
     public void OnEaten() {
         if (respawn) 
         {
-            transform.position = new Vector3(Random.Range(-myArea.range, myArea.range), 
-                                             transform.position.y + 3f, 
-                                             Random.Range(-myArea.range, myArea.range));
+            rb = GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(0, 0, 0);
+             transform.position = new Vector3(vector.x, 
+                                             transform.position.y + 20f, 
+                                             vector.z);
         }
         else 
         {

@@ -31,6 +31,8 @@ public class BananaAgent : Agent
     public bool contribute;
     private RayPerception3D rayPer;
     public bool useVectorObs;
+    public float positionx;
+    public float positionz;
 
     public override void InitializeAgent()
     {
@@ -55,10 +57,12 @@ public class BananaAgent : Agent
             AddVectorObs(localVelocity.x);
             AddVectorObs(localVelocity.z);
             Vector3 localPosition = agentRb.position;
-            AddVectorObs(localPosition.x);
-            AddVectorObs(localPosition.z);
-            Vector3 localRotation = agentRb.rotation.eulerAngles;
-            AddVectorObs(localPosition.y);
+            positionx=localPosition.x-myArea.transform.position.x;
+            AddVectorObs(positionx/50);
+            Monitor.Log(myArea.name+"x", ""+positionx, null);
+            positionz=localPosition.z-myArea.transform.position.z;
+            AddVectorObs(positionz/50);
+            Monitor.Log(myArea.name+"z", ""+positionz, null);
             AddVectorObs(System.Convert.ToInt32(frozen));
             AddVectorObs(System.Convert.ToInt32(shoot));
         }
